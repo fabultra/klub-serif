@@ -1,74 +1,98 @@
 # Klub Serif
 
 Famille typographique du **K.lub** — quatre styles de qualité fonderie,
-fidèles au logotype.
+fidèles au logotype. Version actuelle : **v1.1** (g signature + ligature « k.l »).
 
 ![Specimen Klub Serif](docs/planche.png)
 
+## ⚡ Démarrage rapide
+
+### Sur un site web — 1 ligne, zéro fichier (CDN)
+
+```html
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/fabultra/klub-serif@main/fonts/web/klub-serif.css">
+```
+
+Puis dans le CSS du site :
+
+```css
+h1, h2, .logo { font-family: "Klub Serif Display", Georgia, serif; }
+body          { font-family: "Klub Serif Text", Georgia, serif; }
+```
+
+C'est tout. La ligature « k.lub » se fait automatiquement.
+
+### Sur un site web — auto-hébergé (recommandé en production)
+
+Depuis la racine de votre projet web :
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/fabultra/klub-serif/main/install.sh | bash
+```
+
+(ou `./install.sh mon/dossier` depuis un clone du repo). Le script copie
+les fontes + la feuille `klub-serif.css` dans `./fonts` et affiche les
+deux lignes à coller dans le `<head>` :
+
+```html
+<link rel="stylesheet" href="/fonts/klub-serif.css">
+<link rel="preload" href="/fonts/KlubSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+```
+
+### Sur un builder (WordPress, Webflow, Squarespace, Shopify…)
+
+Chercher la fonction « custom fonts / polices personnalisées » de l'outil,
+téléverser les 4 fichiers de [`fonts/web/`](fonts/web/) (woff2) et nommer
+les familles exactement `Klub Serif Display` et `Klub Serif Text`.
+
+### Sur un ordinateur (print, bureautique, maquettes)
+
+Télécharger les `.ttf` de [`fonts/ttf/`](fonts/ttf/) → double-clic →
+« Installer ». Les fontes apparaissent dans Figma, Canva, Word, etc.
+
 ## Styles
 
-| Fichier | Usage |
-| --- | --- |
-| `KlubSerifDisplay-Regular` | Titres, logotype, affichage |
-| `KlubSerifDisplay-Italic` | Emphase en affichage |
-| `KlubSerifText-Regular` | Paragraphes, menus, petits corps |
-| `KlubSerifText-Italic` | Emphase en texte courant |
+| Famille | Style | Usage |
+| --- | --- | --- |
+| Klub Serif Display | Regular / Italic | Titres, logotype, affichage |
+| Klub Serif Text | Regular / Italic | Paragraphes, menus, petits corps |
 
 Couverture : latin étendu, accents français complets (à â ç é è ê ë î ï ô ù û ü œ æ),
 chiffres, ponctuation. Espacement et crénage d'origine professionnelle.
 
-## Signatures K.lub (v1.1)
+## Signatures K.lub (OpenType)
 
 - **g à un étage par défaut** — dessiné par greffe de pièces du dessin
   d'origine (panse du `q`, crochet du `j`), dans les quatre styles.
-  Le g classique à deux étages reste accessible via la fonctionnalité
-  OpenType `ss01` (`font-feature-settings: "ss01" 1`).
+  Le g classique à deux étages reste accessible :
+  `font-feature-settings: "ss01" 1;`
 - **Ligature maison « k.l »** — la séquence `k.l` (comme dans « k.lub »)
-  se compose automatiquement en un glyphe unique au chassé resserré
-  (fonctionnalité `liga`, active par défaut ; désactivable via
-  `font-feature-settings: "liga" 0`).
+  se compose automatiquement en un glyphe unique au chassé resserré.
+  Désactivable au besoin : `font-feature-settings: "liga" 0;`
 
-## Installation (print / bureautique)
+Démo en ligne : la page [`docs/index.html`](docs/index.html) (activable en
+site via Settings → Pages → `main` → `/docs`).
 
-Télécharger les `.ttf` dans [`fonts/ttf/`](fonts/ttf/), double-clic → « Installer ».
+## Structure du repo
 
-## Web (auto-hébergement recommandé)
-
-Copier les `.woff2` de [`fonts/web/`](fonts/web/) sur le site, puis :
-
-```css
-@font-face {
-  font-family: "Klub Serif Display";
-  src: url("/fonts/KlubSerifDisplay-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Klub Serif Text";
-  src: url("/fonts/KlubSerifText-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-h1, h2, .logo { font-family: "Klub Serif Display", serif; }
-body          { font-family: "Klub Serif Text", serif; }
 ```
-
-Chaque style pèse ~30 Ko en WOFF2. Alternative sans hébergement : les
-mêmes dessins existent sur Google Fonts sous les noms *DM Serif Display*
-et *DM Serif Text* (voir provenance ci-dessous).
+fonts/ttf/   TTF a installer (ordinateur)
+fonts/web/   WOFF2 + klub-serif.css (site web)
+docs/        Page specimen + planche PNG
+LICENSES/    Licences SIL OFL 1.1 (a conserver)
+tools/       Scripts de regeneration (fontTools)
+install.sh   Installateur web (copie fonts/web dans un projet)
+```
 
 ## Provenance et licence
 
 Klub Serif est une **adaptation renommée** de *DM Serif Display* et
 *DM Serif Text* (Colophon Foundry pour Google), elles-mêmes dérivées de
-*Source Serif* (Adobe). Aucune modification de dessin dans cette version ;
-seuls les noms de famille ont été adaptés à la marque.
+*Source Serif* (Adobe). Modifications : renommage conforme, g à un étage
+par défaut (original en `ss01`), ligature `k.l`.
 
-L'ensemble est sous licence **SIL Open Font License 1.1** — voir
-[`LICENSES/`](LICENSES/). En résumé :
+Licence **SIL Open Font License 1.1** — voir [`LICENSES/`](LICENSES/) :
 
 - usage commercial, modification et redistribution autorisés ;
 - conserver les fichiers de licence en cas de redistribution des fontes ;
@@ -77,15 +101,17 @@ L'ensemble est sous licence **SIL Open Font License 1.1** — voir
 
 ## Outils
 
-[`tools/rebrand.py`](tools/rebrand.py) — script fontTools qui régénère la
-famille depuis les fontes DM d'origine (renommage conforme OFL, export
-TTF + WOFF2). Reproductible : `pip install fonttools brotli` puis
-`python3 rebrand.py` à côté d'un dossier `base/` contenant les DM Serif.
+- [`tools/rebrand.py`](tools/rebrand.py) — régénère la famille depuis les
+  DM Serif d'origine (renommage OFL, TTF + WOFF2).
+- [`tools/variantes.py`](tools/variantes.py) — applique les signatures
+  v1.1 (g à un étage, ligature `k.l`, feature `ss01`).
+- Prérequis : `pip install fonttools brotli skia-pathops`.
 
 ## Feuille de route
 
 - [x] Famille 4 styles (Display/Text × romain/italique) — v1.0
-- [x] Glyphes signature K.lub : g à un étage (défaut, classique en ss01)
-      et ligature « k.l » du logotype — v1.1 (`tools/variantes.py`)
+- [x] Signatures : g à un étage (défaut, classique en ss01) et
+      ligature « k.l » — v1.1
+- [x] Feuille `klub-serif.css` + `install.sh`
 - [ ] Graisse supplémentaire si le besoin apparaît (non recommandé en
       synthétique ; à dessiner ou à emprunter à l'ascendance Source Serif)

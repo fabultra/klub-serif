@@ -1,0 +1,52 @@
+/* ============================================================
+   Klub Serif — feuille de style prete a l'emploi
+   ------------------------------------------------------------
+   Une seule ligne suffit dans le <head> :
+
+   Via CDN (aucun fichier a copier) :
+   <link rel="stylesheet"
+     href="https://cdn.jsdelivr.net/gh/fabultra/klub-serif@main/fonts/web/klub-serif.css">
+
+   Ou auto-heberge : copiez ce dossier (css + woff2) dans votre
+   site et pointez le <link> vers klub-serif.css.
+
+   Ensuite, dans votre CSS :
+   h1, h2, .logo { font-family: "Klub Serif Display", Georgia, serif; }
+   body          { font-family: "Klub Serif Text", Georgia, serif; }
+
+   Bonus : la ligature « k.lub » est automatique ; le g classique
+   a deux etages se recupere avec font-feature-settings:"ss01" 1;
+   Licence SIL OFL 1.1 — voir le dossier LICENSES du repo.
+   ============================================================ */
+
+@font-face {
+  font-family: "Klub Serif Display";
+  src: url("KlubSerifDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klub Serif Display";
+  src: url("KlubSerifDisplay-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klub Serif Text";
+  src: url("KlubSerifText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Klub Serif Text";
+  src: url("KlubSerifText-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
