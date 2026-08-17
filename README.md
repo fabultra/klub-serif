@@ -63,6 +63,13 @@ chiffres, ponctuation. Espacement et crénage d'origine professionnelle.
 
 ## Signatures K.lub (OpenType)
 
+- **Le K du logotype (v1.2)** — le glyphe K de la Display Regular est le
+  **tracé vectorisé du K original du logo** (source :
+  [`assets-source/K.png`](assets-source/K.png), dessin propriété du
+  K.lub) : jambe en swash plongeant 75 unités sous la ligne de base,
+  chasse 782. Le K est la seule lettre à porter cette jambe — c'est
+  l'ADN de la marque. Les coupes Text et l'italique gardent le K
+  classique pour les petits corps.
 - **g à un étage par défaut** — dessiné par greffe de pièces du dessin
   d'origine (panse du `q`, crochet du `j`), dans les quatre styles.
   Le g classique à deux étages reste accessible :
