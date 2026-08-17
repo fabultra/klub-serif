@@ -1,7 +1,7 @@
 # Klub Serif
 
 Famille typographique du **K.lub** — quatre styles de qualité fonderie,
-fidèles au logotype. Version actuelle : **v1.1** (g signature + ligature « k.l »).
+fidèles au logotype. Version actuelle : **v1.2** (K du logotype tracé, g signature, ligature « k.l »).
 
 ![Specimen Klub Serif](docs/planche.png)
 
@@ -112,6 +112,7 @@ Licence **SIL Open Font License 1.1** — voir [`LICENSES/`](LICENSES/) :
 - [x] Famille 4 styles (Display/Text × romain/italique) — v1.0
 - [x] Signatures : g à un étage (défaut, classique en ss01) et
       ligature « k.l » — v1.1
+- [x] K du logotype tracé (Display Regular) — v1.2
 - [x] Feuille `klub-serif.css` + `install.sh`
 - [ ] Graisse supplémentaire si le besoin apparaît (non recommandé en
       synthétique ; à dessiner ou à emprunter à l'ascendance Source Serif)
