@@ -17,6 +17,17 @@ fidèles au logotype.
 Couverture : latin étendu, accents français complets (à â ç é è ê ë î ï ô ù û ü œ æ),
 chiffres, ponctuation. Espacement et crénage d'origine professionnelle.
 
+## Signatures K.lub (v1.1)
+
+- **g à un étage par défaut** — dessiné par greffe de pièces du dessin
+  d'origine (panse du `q`, crochet du `j`), dans les quatre styles.
+  Le g classique à deux étages reste accessible via la fonctionnalité
+  OpenType `ss01` (`font-feature-settings: "ss01" 1`).
+- **Ligature maison « k.l »** — la séquence `k.l` (comme dans « k.lub »)
+  se compose automatiquement en un glyphe unique au chassé resserré
+  (fonctionnalité `liga`, active par défaut ; désactivable via
+  `font-feature-settings: "liga" 0`).
+
 ## Installation (print / bureautique)
 
 Télécharger les `.ttf` dans [`fonts/ttf/`](fonts/ttf/), double-clic → « Installer ».
@@ -73,6 +84,8 @@ TTF + WOFF2). Reproductible : `pip install fonttools brotli` puis
 
 ## Feuille de route
 
-- [x] Famille 4 styles (Display/Text × romain/italique)
-- [ ] Glyphes signature K.lub (g à un étage, ligature « k.l » du logotype)
-- [ ] Graisse supplémentaire si besoin (via l'ascendance Source Serif)
+- [x] Famille 4 styles (Display/Text × romain/italique) — v1.0
+- [x] Glyphes signature K.lub : g à un étage (défaut, classique en ss01)
+      et ligature « k.l » du logotype — v1.1 (`tools/variantes.py`)
+- [ ] Graisse supplémentaire si le besoin apparaît (non recommandé en
+      synthétique ; à dessiner ou à emprunter à l'ascendance Source Serif)
