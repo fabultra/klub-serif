@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klub Serif — specimen</title>
+<style>
+@font-face{font-family:"Klub Serif Display";src:url("../fonts/web/KlubSerifDisplay-Regular.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Klub Serif Display";font-style:italic;src:url("../fonts/web/KlubSerifDisplay-Italic.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Klub Serif Text";src:url("../fonts/web/KlubSerifText-Regular.woff2") format("woff2");font-display:swap}
+@font-face{font-family:"Klub Serif Text";font-style:italic;src:url("../fonts/web/KlubSerifText-Italic.woff2") format("woff2");font-display:swap}
+:root{--paper:#F2F0EA;--ink:#1B1917;--muted:#8A8377}
+body{margin:0;background:var(--paper);color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:6vh 6vw}
+.lbl{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.25em;color:var(--muted);margin:3.2em 0 .4em;text-transform:uppercase}
+.d{font-family:"Klub Serif Display",serif;font-weight:400}
+.t{font-family:"Klub Serif Text",serif}
+.logo{font-size:clamp(64px,14vw,190px);line-height:1.02;margin:0}
+.alpha{font-size:clamp(34px,7vw,96px);line-height:1.15;overflow-wrap:anywhere}
+.acc{font-size:clamp(24px,4.6vw,60px)}
+.pan{font-size:clamp(26px,5vw,64px);line-height:1.22}
+.ital{font-style:italic;font-size:clamp(24px,4.6vw,56px)}
+.txt{font-size:clamp(17px,2vw,23px);line-height:1.55;max-width:36em}
+.caps{font-size:clamp(24px,4.6vw,58px);overflow-wrap:anywhere}
+footer{margin-top:6em;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:var(--muted);line-height:1.6}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="d logo">k.lub</h1>
+  <div class="lbl">Minuscules — Klub Serif Display</div>
+  <div class="d alpha">abcdefghijklmnopqrstuvwxyz</div>
+  <div class="lbl">Majuscules</div>
+  <div class="d caps">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+  <div class="lbl">Accents français</div>
+  <div class="d acc">à â ç é è ê ë î ï ô ù û ü œ æ</div>
+  <div class="lbl">Pangramme</div>
+  <div class="d pan">portez ce vieux whisky au juge blond qui fume</div>
+  <div class="lbl">Italique</div>
+  <div class="d ital">bijou bulle quartz échéance</div>
+  <div class="lbl">Klub Serif Text — petits corps</div>
+  <p class="t txt">Le K.lub réunit celles et ceux qui aiment les belles choses
+  simples. Cette version « Text » du même dessin, plus robuste, sert les
+  paragraphes, cartes de membre et menus — pendant que la « Display »
+  signe les titres et le logotype.</p>
+  <footer>Klub Serif — adaptation OFL de DM Serif Display / DM Serif Text
+  (dérivées de Source Serif). Licence SIL OFL 1.1, voir le dossier
+  <a href="../LICENSES/">LICENSES</a>.</footer>
+</div>
+</body>
+</html>
